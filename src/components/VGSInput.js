@@ -1,6 +1,7 @@
 import React from 'react';
 import fireCallbackOnSuccess from './utility/fireCallbackOnSuccess.js';
-import './VGSInput.css';
+
+import './css/VGSInput.css';
 
 class VGSInput extends React.Component {
     constructor(props) {
@@ -24,9 +25,12 @@ class VGSInput extends React.Component {
 
     render() {
         return (
-            <input type="text" value={this.state.inputValue} onChange={(e) => this.inputMatchesCommand(e)}>
-
-            </input>
+            <div  className="item-vgs_input"  >
+                <input
+                    type="text" 
+                    value={this.state.inputValue} onChange={(e) => this.inputMatchesCommand(e)}>
+                </input>
+            </div>
         );
     }
 }

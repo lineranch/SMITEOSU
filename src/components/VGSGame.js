@@ -2,6 +2,8 @@ import React from 'react';
 import VGSCommand from './VGSCommand.js';
 import VGSInput from "./VGSInput.js";
 
+import './css/VGSGame.css';
+
 class VGSGame extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +22,7 @@ class VGSGame extends React.Component {
 
     render() {
         return(
-            <React.Fragment>
+            <div className="container-game">
                 <VGSCommand 
                     vgsCommand={this.commands[this.state.currentCommandIndex]}
                 />
@@ -28,7 +30,7 @@ class VGSGame extends React.Component {
                     command={this.commands[this.state.currentCommandIndex]}
                     handleClick={() => this.rotateCommand()}
                 />
-            </React.Fragment>
+            </div>
         );
     }
 }
